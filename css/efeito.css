@@ -1,0 +1,107 @@
+ /* --- Fundo e corpo --- */
+        body {
+            background-color: #0a0a0a;
+            color: #fff;
+            font-family: 'Trebuchet MS', sans-serif;
+            height: 100vh;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        /* --- Wrapper --- */
+        .wrapper {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 40px 60px;
+            box-shadow: 0 0 25px rgba(255, 0, 0, 0.5);
+            position: relative;
+            overflow: hidden;
+            width: 350px;
+        }
+
+        h1 {
+            color: #ff0000;
+            text-shadow: 0 0 15px #ff0000;
+            text-align: center;
+            margin-bottom: 25px;
+        }
+
+        /* --- Input boxes --- */
+        .input-box {
+            position: relative;
+            margin: 15px 0;
+        }
+
+        .input-box input {
+            width: 100%;
+            padding: 12px 40px 12px 12px;
+            border-radius: 6px;
+            border: none;
+            outline: none;
+            background: rgba(255,255,255,0.1);
+            color: #fff;
+        }
+
+        .input-box i {
+            position: absolute;
+            right: 10px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #ff0000;
+        }
+
+        /* --- Botão --- */
+        .btn {
+            width: 100%;
+            padding: 12px;
+            border: none;
+            border-radius: 6px;
+            background: #ff0000;
+            color: #fff;
+            cursor: pointer;
+            margin-top: 20px;
+            animation: piscar 1.5s infinite alternate;
+            font-size: 1em;
+        }
+
+        .btn:hover {
+            background: #b30000;
+            box-shadow: 0 0 15px #ff0000;
+        }
+
+        @keyframes piscar {
+            0% { box-shadow: 0 0 5px #ff0000; background: #ff0000; }
+            100% { box-shadow: 0 0 25px #ff0000; background: #b30000; }
+        }
+
+        /* --- Dica --- */
+        .dica a {
+            color: #aaa;
+            text-decoration: none;
+            font-size: 0.9em;
+        }
+
+        .dica a:hover {
+            color: #ff0000;
+        }
+
+        /* --- Gotas de sangue --- */
+        .gota {
+            position: absolute;
+            top: -30px;
+            width: 10px;
+            height: 10px;
+            background: radial-gradient(circle at 30% 30%, #ff4444, #660000 80%);
+            border-radius: 50%;
+            opacity: 0.9;
+            animation: cair linear forwards;
+        }
+
+        @keyframes cair {
+            0% { transform: translateY(0) scale(1); opacity: 1; }
+            90% { opacity: 1; }
+            100% { transform: translateY(350px) scale(0.8); opacity: 0; }
+        }

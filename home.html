@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🎉 Feliz Aniversário 🎂</title>
+  <style>
+body {
+  background: black;
+  height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Poppins', sans-serif;
+  color: #fff;
+  overflow: hidden;
+}
+
+    h1 {
+      font-size: 2.8em;
+      margin-bottom: 10px;
+      text-shadow: 0 0 20px #dc69ff, 0 0 40px #e414ff;
+      animation: piscar 2s infinite;
+    }
+
+    p {
+      font-size: 1.2em;
+      margin-bottom: 40px;
+      text-align: center;
+      max-width: 400px;
+      line-height: 1.5em;
+    }
+
+    @keyframes piscar {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.8; }
+    }
+
+    /* Container do GIF */
+    .gif-container {
+      width: 300px;
+      height: 300px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .gif-container img {
+      max-width: 100%;
+      max-height: 100%;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(255,255,255,0.4);
+    }
+
+    /* Confete */
+    .confete {
+      position: absolute;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      animation: cairConfete 3s linear infinite;
+    }
+
+    @keyframes cairConfete {
+      from { transform: translateY(-10px); opacity: 1; }
+      to { transform: translateY(100vh); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+  <h1>🎉 Feliz Aniversário! 🎂</h1>
+  <p>Que seu dia seja cheio de alegriaaaaaa! 💖</p>
+
+  <div class="gif-container">
+    <img src="https://i.pinimg.com/originals/63/09/8e/63098efa4be4d7374d68904d4fb254d7.gif" alt="Dança animada">
+  </div>
+
+  <script>
+    // Confetes coloridos
+    const cores = ['#ff69b4', '#ffd700', '#00fa9a', '#1e90ff', '#ff4500'];
+    for (let i = 0; i < 60; i++) {
+      const confete = document.createElement('div');
+      confete.classList.add('confete');
+      confete.style.left = Math.random() * 100 + 'vw';
+      confete.style.top = Math.random() * -50 + 'px';
+      confete.style.background = cores[Math.floor(Math.random() * cores.length)];
+      confete.style.animationDuration = (Math.random() * 3 + 2) + 's';
+      confete.style.animationDelay = Math.random() * 2 + 's';
+      document.body.appendChild(confete);
+    }
+  </script>
+</body>
+</html>
